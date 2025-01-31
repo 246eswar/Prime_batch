@@ -23,13 +23,13 @@ class CQ:
     def dequeue(self):
         if self.is_Empty():
              print("Empty")
-        item = self.front.data
+        temp= self.front.data
         if self.front == self.rear:
             self.front=self.rear=None
         else:
-            self.front=temp.next
+            self.front=self.front.next
             self.rear.next=self.front
-        print("Dequeue:",item)
+        print("Dequeue:",temp)
     def peek(self):
         if self.is_Empty():
              print("Empty")
@@ -48,6 +48,8 @@ class CQ:
 l = CQ()
 l.enqueue(10)
 l.display()
-    
-    
+l.enqueue(10)
+l.display()
+l.dequeue()    
+l.display()    
                 
