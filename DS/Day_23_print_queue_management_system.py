@@ -40,3 +40,25 @@ while a != "exit":
     
     if a == "exit":
         print("Exiting print queue system.")
+
+2nd method
+
+q=[]
+while True:
+	s=input("Enter 'add' to add a print job, 'process' to print the next job, or 'exit': ")
+	if s=="add":
+		n=input("Enter print job name: ")
+		q.append(n)
+		print("Added print job:",n)
+	elif s=="process":
+		if len(q)==0:
+			print("No print jobs to process.")
+		else:
+			print("Printing job:",q[0])
+			del q[0]
+	elif s=='exit':
+		break
+	print("Current print queue:",q)
+print("Exiting print queue system.")
+
+
